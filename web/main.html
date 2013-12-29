@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularDart-AngularJS</title>
+  <style>
+    .match {
+      background-color: green;
+    }
+    .column {
+      float: left;
+      margin: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="angular-dart" class="column">
+  <h1>AngularDart</h1>
+
+
+
+  <h2>Match Directive</h2>
+  <p>Add the match class when the value of the input matches ^\d\d$.</p>
+  <input type="text" vs-match="^\d\d$"></input>
+
+
+
+  <h2>Toggle Component</h2>
+  <p>Toggle the visibility of the content.</p>
+  <toggle button="Toggle">Content</toggle>
+
+
+
+  <h2>Compare Controller</h2>
+  <p>Compares the values of two input fields.</p>
+  <div compare-ctrl>
+    First <input type="text" ng-model="ctrl.firstValue">
+    Second <input type="text" ng-model="ctrl.secondValue">
+
+    <div ng-if="ctrl.valuesAreEqual">
+      First == Second
+    </div>
+  </div>
+
+
+
+  <h2>IsBlank Filter</h2>
+  <p>Print if the value is blank</p>
+  <p>Prints the result of "" | isBlank: {{"" | isBlank}}</p>
+  <p>Prints the result of "aaa" | isBlank: {{"aaa" | isBlank}}</p>
+
+
+
+  <script type="application/dart" src="angulardart/angulardart_samples.dart"></script>
+  <script src="../packages/browser/dart.js"></script>
+</div>
+
+
+
+<div id="angular-js" class="column">
+  <h1>AngularJS</h1>
+
+
+
+  <h2>Match Directive</h2>
+  <p>Add the match class when the value of the input matches ^\d\d$.</p>
+  <input type="text" vs-match="^\d\d$"></input>
+
+
+
+  <h2>Toggle Component</h2>
+  <p>Toggle the visibility of the content.</p>
+  <toggle button="Toggle">Content</toggle>
+
+
+
+  <h2>Compare Controller</h2>
+  <p>Compares the values of two input fields.</p>
+  <div ng-controller="CompareCtrl as ctrl">
+    First <input type="text" ng-model="ctrl.firstValue">
+    Second <input type="text" ng-model="ctrl.secondValue">
+
+    <div ng-if="ctrl.valuesAreEqual()">
+      First == Second
+    </div>
+  </div>
+
+
+
+  <h2>IsBlank Filter</h2>
+  <p>Print if the value is blank</p>
+  <p>Prints the result of "" | isBlank: {{"" | isBlank}}</p>
+  <p>Prints the result of "aaa" | isBlank: {{"aaa" | isBlank}}</p>
+
+
+
+  <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js"></script>
+  <script type="application/javascript" src="angularjs/angularjs_samples.js"></script>
+</div>
+
+
+</body>
+</html>
